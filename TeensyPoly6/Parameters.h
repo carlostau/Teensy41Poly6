@@ -10,12 +10,12 @@ byte ccChannel = midiChannel;
 byte midiOutCh = midiChannel;
 boolean patchRecall = false;
 
-const int muxPots1 = A15;
-const int muxPots2 = A14;
-const int muxPots3 = A21;
-const int muxPots4 = A22;
-const int muxPots5 = A16;
-const int muxPots6 = A17;
+const int muxPots1 = A2;
+const int muxPots2 = A3;
+const int muxPots3 = A12;
+const int muxPots4 = A13;
+const int muxPots5 = A4;
+const int muxPots6 = A5;
 
 #define TOLERANCE 3
 
@@ -1291,3 +1291,4 @@ const int16_t wave28[257] = {
   -2490, -9373, -16230, -21230, -21709, -19469, -22672, -22119, -13095, -9569,
   -14186, -13037, -13322, -14860, -11388, -3982, -1002, 970
 };
+
