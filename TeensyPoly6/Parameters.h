@@ -10,6 +10,9 @@ byte ccChannel = midiChannel;
 byte midiOutCh = midiChannel;
 boolean patchRecall = false;
 
+
+// updated pins for Teensy4.1
+
 const int muxPots1 = A2;
 const int muxPots2 = A3;
 const int muxPots3 = A12;
@@ -1291,4 +1294,5 @@ const int16_t wave28[257] = {
   -2490, -9373, -16230, -21230, -21709, -19469, -22672, -22119, -13095, -9569,
   -14186, -13037, -13322, -14860, -11388, -3982, -1002, 970
 };
+
 
