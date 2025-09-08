@@ -15,6 +15,8 @@ ADC *adc = new ADC();
 #define MUX2 29
 #define MUX3 30
 
+
+
 //Teensy 3.6 Pins
 
 #define DEBOUNCE 30
@@ -133,6 +135,10 @@ void setupHardware()
 
 
   //Mux address pins
+  //Mux ADC (Teensy 4.1 jitter issue)
+  pinMode(MUX1_S, INPUT_DISABLE);
+  pinMode(MUX2_S, INPUT_DISABLE);
+  pinMode(MUX3_S, INPUT_DISABLE);
 
   pinMode(MUX1, OUTPUT);
   pinMode(MUX2, OUTPUT);
@@ -152,3 +158,4 @@ void setupHardware()
   pinMode(BACK_SW, INPUT_PULLUP);
 
 }
+
