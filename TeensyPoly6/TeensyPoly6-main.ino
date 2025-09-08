@@ -1503,12 +1503,20 @@ FLASHMEM String getCurrentPatchData() {
 
 FLASHMEM void checkMux() {
 
-  mux1Read = adc->adc0->analogRead(muxPots1);
-  mux2Read = adc->adc0->analogRead(muxPots2);
-  mux3Read = adc->adc0->analogRead(muxPots3);
-  mux4Read = adc->adc1->analogRead(muxPots4);
-  mux5Read = adc->adc1->analogRead(muxPots5);
-  mux6Read = adc->adc1->analogRead(muxPots6);
+mux1Read = adc->adc1->analogRead(muxPots1); // A2: ADC1
+mux2Read = adc->adc1->analogRead(muxPots2); // A3: ADC1
+mux3Read = adc->adc1->analogRead(muxPots3); // A12: ADC1
+mux4Read = adc->adc1->analogRead(muxPots4); // A13: ADC1
+mux5Read = adc->adc1->analogRead(muxPots5); // A4: ADC1
+mux6Read = adc->adc1->analogRead(muxPots6); // A5: ADC1
+
+  // OLD ADC
+//  mux1Read = adc->adc0->analogRead(muxPots1);
+ // mux2Read = adc->adc0->analogRead(muxPots2);
+//  mux3Read = adc->adc0->analogRead(muxPots3);
+//  mux4Read = adc->adc1->analogRead(muxPots4);
+//  mux5Read = adc->adc1->analogRead(muxPots5);
+ // mux6Read = adc->adc1->analogRead(muxPots6);
 
   if (mux1Read > (mux1ValuesPrev[muxInput] + QUANTISE_FACTOR) || mux1Read < (mux1ValuesPrev[muxInput] - QUANTISE_FACTOR)) {
     mux1ValuesPrev[muxInput] = mux1Read;
@@ -2863,3 +2871,4 @@ void loop() {
   fxR.gain(0, outGain - revMix / 1.6);
   fxR.gain(2, outGain - revMix / 1.6);
 }
+
