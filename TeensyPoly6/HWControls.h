@@ -135,10 +135,7 @@ void setupHardware()
 
 
   //Mux address pins
-  //Mux ADC (Teensy 4.1 jitter issue)
-  pinMode(MUX1_S, INPUT_DISABLE);
-  pinMode(MUX2_S, INPUT_DISABLE);
-  pinMode(MUX3_S, INPUT_DISABLE);
+
 
   pinMode(MUX1, OUTPUT);
   pinMode(MUX2, OUTPUT);
@@ -157,5 +154,14 @@ void setupHardware()
   pinMode(SETTINGS_SW, INPUT_PULLUP);
   pinMode(BACK_SW, INPUT_PULLUP);
 
+//Mux ADC (Teensy 4.1 jitter issue)
+  pinMode(muxPots1, INPUT_DISABLE);
+  pinMode(muxPots2, INPUT_DISABLE);
+  pinMode(muxPots3, INPUT_DISABLE);
+  pinMode(muxPots4, INPUT_DISABLE);
+  pinMode(muxPots5, INPUT_DISABLE);
+  pinMode(muxPots6, INPUT_DISABLE);
+
 }
+
 
